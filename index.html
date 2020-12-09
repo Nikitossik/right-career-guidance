@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Узнай, как "Выбор профессии" разрушает жизнь большинства выпускников школ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href='css/style.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script defer src="js/script.js"></script>
+    <script defer>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data1 = google.visualization.arrayToDataTable([
+          ['Ситуация', 'Процент'],
+          ['Работают по специальности', 35],
+          ['Работа не связана с образованием', 49],
+          ['Пришлось переучиваться', 11],
+          ['Другое', 5]
+        ]);
+
+        var options1 = {
+            is3D:true,
+            colors:['#A9D18E','#FB1557','#E55189','#FC8EC8'],
+            legend:{position:'bottom', textStyle: {color: '#111', fontSize: 16}},
+        };
+
+        var chart1 = new google.visualization.PieChart($('.chart#students_career_sit')[0]);
+
+        chart1.draw(data1, options1);
+
+        var data2 = google.visualization.arrayToDataTable([
+          ['Случай', 'Процент'],
+          ['Не нашёл вакансий', 41],
+          ['Не понравилась зарплата', 28],
+          ['Не понравилась специальность', 20],
+          ['Их профессия исчезла на рынке труда', 3],
+          ['Другое', 8]
+        ]);
+
+        var options2 = {
+            is3D:true,
+            colors:['#FB1557','#E55189','#FF9B69', '#F1A78A', '#C5E0B4'],
+            legend:{position:'bottom', textStyle: {color: '#111', fontSize: 16}},
+        };
+
+        var chart2 = new google.visualization.PieChart($('.chart#students_reasons')[0]);
+
+        chart2.draw(data2, options2);
+      }
+
+    $(window).resize(function(){
+        drawChart();
+    });
+    </script>
+</head>
+<body>
+    <nav class="nav">
+        <a class="brand" href="#home"> <span>Правильная профориентация</span><span>Действуй осознанно</span></a>
+        <ul class="main">
+            <li><a href="#why">Почему же?</a></li>
+            <li><a href="#our_alg">Наш алгоритм</a></li>
+            <li><a href="#mistakes">Ошибки выбора</a></li>
+            <li><a href="#jobs">Профессии</a></li>
+        </ul>
+        <div class="change_lang">
+            <a href="#">РУС</a>
+            <span>/</span>
+            <a href="ukrainian-version.html">УКР</a>
+        </div>
+        <div class="menu_btn">
+            <span></span>
+        </div>
+    </nav>
+    <header class="header" id="home">  
+        <div class="content">
+            <h1><span class="first">Узнай,</span> <br> <span class="second">как "Выбор профессии" разрушает жизнь</span> <br> <span class="highlighted">большинства выпускников школ</span></h1>
+            <a class="btn" href="#why">Почему же?</a>
+            <a class="btn" href="#jobs">Голосовать</a>
+        </div>
+    </header>
+    <main class="wrap">
+        <section id='why'>
+            <h2>Почему "Выбор профессии" разрушает жизнь <span class="highlighted">большинства выпускников школ?</span></h2>
+            <div class="content" id="statistics">
+            <h3>Статистика - вещь упрямая...</h3>
+            <div class='animated anim_1'>
+                <p>Одно из самых важных решений, которые человек принимает в своей жизни это выбор профессии и карьерного пути, который определит качества всей дальнейшей жизни. К сожалению, очень часто подобный выбор совершается без должного обдумывания, на уровне интуиции или сиюминутных желаний и увлечений.</p>
+                <p>Какое же количество выпускников используют свое образование и работают по специальности? На сайте «Работа в Харькове» было проведено исследование с целью ответить на этот вопрос.</p>
+                <div class="chart_container">
+                    <div class="chart" id="students_career_sit"></div>
+                </div>
+            </div>
+            <div class="animated anim_2">
+                <p><span class="highlighted">Основние причины, почему выпускники ВУЗов не работают по специальности:</span></p>
+               <div class="chart_container">
+                    <div class="chart" id="students_reasons"></div>
+                </div>
+                <p>Таким образом, можно сделать вывод, что еще до поступления в ВУЗ, люди очень мало знали о своей будущей профессии. Какой алгоритм действий приводит будущего выпускника к таким последствиям?
+                </p>
+            </div>
+            </div>
+            <div class="content" id='strategy'>
+                <h3>Алгоритм, <span class="highlighted">что движет вами</span></h3>
+                <p>Если школьник хочет определится, кем ему работать в будущем, то со 100% вероятностью полезет в Интернет, ведь это самый большой источник информации в наше время. В процессе поиска, он наткнётся на сайты, которые в той или иной степени показывают алгоритм, основаный на японской технике Икигай.</p>
+                <div class="row">
+                    <div class="col50 animated anim_3">
+                        <div class="imgBox">
+                            <img src="images/job_choice_model_ru.webp" alt="Модель выбора профессии">
+                        </div>
+                    </div>
+                    <div class="col50 animated anim_4">
+                        <div class="txtBox">
+                        <p>На сайтах по профориентации выделяются всего 3 составляющие: Хочу-Могу-Надо.</p>
+                        <ul>
+                            <li>Хочу: Интересы, склонности, мотивы, планы, профессиональные намерения, это то занятие, которое делается с интересом, с желанием, по собственной инициативе.</li>
+                            <li>Могу: Возможности личности, то есть: состояние здоровья, имеющийся опыт, психофизиологические качества, способности к различным видам деятельности.</li>
+                            <li>Надо: Потребности общества, то есть: представление об обязаности, нравственные установки, ценностные ориентации, знание мира профессий и о перспективных специальности, которые пользуются спросом на рынке труда, и вероятность трудоустройства по выбранной профессии.</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>Посетитель сайта получает алгоритм, который сводит его к поиску ответов на данные вопросы: Что я хочу? Что я могу? Что требуется на рынке? В конце концов посредством походов к специалистам, профориентационным тестам, вы определяетесь, сделая компромиссное решение, как-то удоблетворяющее 3-м состовляющим. <span class="highlighted">Такой алгоритм похож на выбор одежды в супермаркете, вы будто осматриваете вещицу, меряете. Следуя этому алгоритму, вы не имеете чёткого плана действий при неправильном выборе.</span></p>
+                <p>Мир очень быстро меняется, но по такому плану действий вы <span class="highlighted">абсолютно не адаптируетесь к этим изменениям, а просто выбираете!</span></p> 
+            </div>
+        </section>
+        <section id='our_alg'>
+                <h2>Наш алгоритм</h2>
+                <div class="content animated anim_1" id="first">
+                    <h3>Шаг №1: Базовые способы зарабатывания денег</h3>
+                    <div class="row">
+                        <div class="col50">
+                            <div class="imgBox">
+                                <img src="images/first_step_img.webp" alt="Какие же базовые способы зарабатывания денег?">
+                            </div>
+                        </div>
+                        <div class="col50">
+                            <div class="txtBox">
+                                <p>Узнайте про базовые способы зарабатывания денег. Это поможет просмотреть альтернативные варианты при выборе профессии и получении дальнейшей работы</p>
+                                <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeh0NvLDX6dcFjoM59a6GygpaL5z-Zrpyy_qqxDwLltHFDHGg/viewform?usp=sf_link" target="_blank">Записаться на вебинар</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content animated anim_2" id="second">
+                    <h3>Шаг №2: Базовые принципы рыночной экономики. Конкуренция</h3>
+                    <div class="row">
+                        <div class="col50">
+                            <div class="imgBox">
+                                <img src="images/second_step_img.webp" alt="Какие же базовые принципы рыночной экономики?">
+                            </div>
+                        </div>
+                        <div class="col50">
+                            <div class="txtBox">
+                                <p>Вы должны выработать навык конкуренции, ведь мир безпрерывно меняется</p>
+                                <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeh0NvLDX6dcFjoM59a6GygpaL5z-Zrpyy_qqxDwLltHFDHGg/viewform?usp=sf_link" target="_blank">Записаться на вебинар</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content animated anim_3" id="third">
+                    <h3>Шаг №3: Механизмы формирования команды. Алгоритмы принятия кадровых решений</h3>
+                    <div class="row">
+                        <div class="col50">
+                            <div class="imgBox">
+                                <img src="images/third_step_img.webp" alt="Механизмы формирования команды?">
+                            </div>
+                        </div>
+                        <div class="col50">
+                            <div class="txtBox">
+                                <p>Алгоритмы принятия кадровых решений играет важную роль для вас. Вы должны уметь продать себя и свои умения</p>
+                                <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeh0NvLDX6dcFjoM59a6GygpaL5z-Zrpyy_qqxDwLltHFDHGg/viewform?usp=sf_link" target="_blank">Записаться на вебинар</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id='mistakes'>
+            <h2>Часто допускаемые <span class="highlighted">ошибки</span> при выборе профессии</h2>
+            <div class="content animated anim_1">
+                <div class="row">
+                    <div class="col50">
+                        <div class="imgBox">
+                            <img src="images/mis1.webp" alt="Устойчивое суждения о престижности профессии">
+                        </div>
+                    </div>
+                    <div class="col50">
+                        <div class="txtBox">
+                            <h3>Устойчивое суждения о престижности профессии</h3>
+                            <p>Если современном тинейджеру поставить выбор между фрезеровщиком и психологом - очевидно, выбор падет на второй вариант. Это стандартный шаблон мышления, который навязывает нам общественное мнение, видимо клише, которое ассоциативно закрепляется за определенным кругом, так сказать "не модных» профессий. Спрос на рынке профессий, навеянный сегодняшним днем, конечно, стоит учитывать, но куда важнее прислушиваться и учитывать собственное мнение, интересы и предпочтения.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content animated anim_2">
+                <div class="row">
+                    <div class="col50">
+                        <div class="imgBox">
+                            <img src="images/mis2.webp" alt="Нежелание разобраться в себе">
+                        </div>
+                    </div>
+                    <div class="col50">
+                        <div class="txtBox">
+                            <h3>Нежелание разобраться в себе</h3>
+                            <p>Определить сильные и слабые стороны помогут не только психологи, но и друзья, родственники. Но даже наличие навыков не является гарантией освоение профессии, если у человека имеются прямые противопоказания. Например, в летчики не берут людей со слабым сердцем.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content animated anim_3">
+                <div class="row">
+                    <div class="col50">
+                        <div class="imgBox">
+                            <img src="images/mis3.webp" alt="Знание только об одной стороне профессии">
+                        </div>
+                    </div>
+                    <div class="col50">
+                        <div class="txtBox">
+                            <h3>Знание только об одной стороне профессии</h3>
+                            <p>По легкости, с которой актер создает на сцене образ, стоит упорный ежедневный труд. А журналисты не всегда выступают в телепередачах. Чаще они прорабатывают большое количество информации, архивов, разговаривают с десятками людей, перед тем как подготовить 10-минутное сообщение, которое к тому же озвучит кто-то другой (диктор на телевидении).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content animated anim_4">
+                <div class="row">
+                    <div class="col50">
+                        <div class="imgBox">
+                            <img src="images/mis4.webp" alt="Влияние других людей на выбор">
+                        </div>
+                    </div>
+                    <div class="col50">
+                        <div class="txtBox">
+                            <h3>Влияние других людей на выбор</h3>
+                            <p>Существует устойчивое мнение, что окружение формирует человека. Хорошо, когда это окружение состоит из самодостаточных индивидуумов с достойным собственным примером успешного человека. Когда дело идет о таких же подростков, как и ты, вряд ли выбор профессии становится глубоко продуманной акцией. Скорее всего, это просто решение, принятое «за компанию». Стоит помнить, что профессию ты подбираешь для себя, а не для какой-то другого человека.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content animated anim_5">
+                <div class="row">
+                    <div class="col50">
+                        <div class="imgBox">
+                            <img src="images/mis5.webp" alt="Отношение к выбору профессии как к неизменной">
+                        </div>
+                    </div>
+                    <div class="col50">
+                        <div class="txtBox">
+                            <h3>Отношение к выбору профессии как к неизменной</h3>
+                            <p>У многих абитуриентов всегда имеет место страх. Этот страх касается рассуждений на тему: «Выбор здесь и сейчас определит направление деятельности на всю мою дальнейшую жизнь, и я ничего уже не смогу изменить». Но в наше время все больше ценятся многопрофильные специалисты, поэтому не стоит останавливаться на первой, а следует и в дальнейшем развивать и совершенствовать себя. Никто не знает, как повернется жизнь: возможно, именно та, первая, ненавистная профессия - в трудную минуту прокормит вас.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id='jobs'>
+            <h2>Профессии</h2>
+            <p>Если вы хотите по-больше узнать про разные профессии, то у нас для вас хорошие новости! Мы проводим онлайн-голосование, где вы можете решить, сделать ли описание той или иной профессии. Сделайте свой выбор</p>
+            <div class="content">
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="images/professions/programmer.webp" alt="Программист">
+                    </div>
+                    <div class="text">
+                        <p>Программист</p>
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdCdo1jENEa3SXGUvt3ikimdw94ye5KMKPhZeS6THuUzUGfA/viewform?usp=sf_link" class="btn">Голосовать</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="images/professions/designer.webp" alt="Дизайнер">
+                    </div>
+                    <div class="text">
+                        <p>Дизайнер</p>
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfpkvTU4Hht6o-446jPzcMhbwxGiMH38MkGXNaN2WWA_pwchg/viewform?usp=sf_link" class="btn">Голосовать</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="imgBox">
+                        <img src="images/professions/journalist.webp" alt="Журналист">
+                    </div>
+                    <div class="text">
+                        <p>Журналист</p>
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd87Jk-cNAhh7uhRw91juJy4G8dBFaEgo9gyiE_MS-ALcxk2A/viewform?usp=sf_link" class="btn">Голосовать</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="row">
+            <div class="col25">
+                <a class="brand" href="#home"> <span>Правильная профориентация</span><span>Действуй осознанно</span></a>
+            </div>
+            <div class="col25">
+                <ul class="main">
+                    <li><a href="#why">Почему же?</a></li>
+                    <li><a href="#our_alg">Наш алгоритм</a></li>
+                    <li><a href="#mistakes">Ошибки выбора</a></li>
+                    <li><a href="#jobs">Профессии</a></li>
+                </ul>
+            </div>
+            <div class="col25 social">
+                <a class="soc_media" href=""><i class="fa fa-facebook"></i></i></a>
+                <a class="soc_media" href=""><i class="fa fa-instagram"></i></a>
+                <a class="soc_media" href=""><i class="fa fa-telegram"></i></a>
+                <a class="soc_media" href=""><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="col25 contact">
+                <h3>Напиши нам</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Имя">
+                </div>
+                <div class="inputBox">
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="inputBox">
+                    <textarea placeholder="Ваше сообщение"></textarea>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" class="btn" value="Отправить">
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
