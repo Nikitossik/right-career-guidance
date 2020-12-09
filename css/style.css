@@ -449,8 +449,22 @@ section#jobs .content .box .text .btn{
 }
 
 .footer .row .col25.social .soc_media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
     font-size: 28px;
     color:#fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.footer .row .col25.social .soc_media:hover{
+    background:#fff;
+    color:#570808;
 }
 
 .footer .row .col25.contact h3{
