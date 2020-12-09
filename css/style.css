@@ -64,7 +64,7 @@ body{
     align-items: center;
     top: 0;
     left: 0;
-    background: url(../images/header_background_image.jpg); 
+    background: url(../images/header_background_image.webp); 
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -320,7 +320,7 @@ section li{
 }
 
 section#our_alg{
-    background: url(../images/alg_back_img.jpg);
+    background: url(../images/alg_back_img.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
