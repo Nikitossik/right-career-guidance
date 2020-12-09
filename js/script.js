@@ -8,13 +8,13 @@ $(document).ready(function(){
 
     $('.menu_btn').click(function(){
         $('.menu_btn, .nav .main').toggleClass('active');
-        $("html,body").toggleClass('noscroll');
+        $("body").toggleClass('noscroll');
     });
 
     $('.nav .main a').each(function(){
         $(this).click(function(){
             $('.menu_btn, .nav .main').toggleClass('active');  
-            $("html,body").toggleClass('noscroll');
+            $("body").toggleClass('noscroll');
         });
     });
 
